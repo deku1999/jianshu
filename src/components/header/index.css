@@ -1,0 +1,7 @@
+nav.evening {
+    border-bottom: 1px solid rgba(0,0,0,.7);
+    background-color: #3f3f3f;
+}
+#model.evening::before{
+    background-color: #3f3f3f;
+}

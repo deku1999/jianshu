@@ -1,17 +1,19 @@
-import React from 'react';
+import React , {Fragment} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import GlobalStyle from './style.js';
+import Iconfont from './static/iconfont/style'
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import store from './store/index'
+import {Provider} from 'react-redux'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Fragment>
+      <GlobalStyle></GlobalStyle>  
+      <Iconfont></Iconfont>
+      <Provider store = {store}>
+          <App></App>
+      </Provider>
+    </Fragment>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
